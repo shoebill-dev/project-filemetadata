@@ -11,6 +11,7 @@ app.use('/public', express.static(process.cwd() + '/public'));
 
 app.get('/', function(req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
+  console.log(process.cwd() + '/views/index.html');
 });
 
 app.post('/api/fileanalyse', upload.single('upfile'), ((req, res) => {
